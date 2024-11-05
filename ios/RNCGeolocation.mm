@@ -208,7 +208,7 @@ RCT_EXPORT_MODULE()
    _usingSignificantChanges
      ? [_locationManager startMonitoringSignificantLocationChanges]
      : [_locationManager startUpdatingLocation];
-#else
+#elif !TARGET_OS_TV
     [_locationManager startUpdatingLocation];
 #endif
 }
@@ -219,7 +219,7 @@ RCT_EXPORT_MODULE()
    _usingSignificantChanges
      ? [_locationManager stopMonitoringSignificantLocationChanges]
      : [_locationManager stopUpdatingLocation];
-#else
+#elif !TARGET_OS_TV
     [_locationManager stopUpdatingLocation];
 #endif
 }
