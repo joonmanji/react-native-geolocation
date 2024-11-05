@@ -190,7 +190,7 @@ RCT_EXPORT_MODULE()
 
   if (@available(iOS 14.0, *)) {
     if (
-#if ! TARGET_OS_VISION && !TARGET_OS_TV
+#if !TARGET_OS_VISION && !TARGET_OS_TV
       _lastUpdatedAuthorizationStatus == kCLAuthorizationStatusAuthorizedAlways ||
 #endif
       _lastUpdatedAuthorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse
